@@ -1,0 +1,1429 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<style>
+.trialDiv {
+  border: 2px solid teal;
+  padding: 40px;
+  width: 1000px;
+  margin: 0 auto;
+  display: none;
+}
+
+.likert li {
+  float: left;
+  list-style-type: none;	
+}
+
+body {
+  font-family: Arial, Helvetica;
+  font-size: 14pt;
+}
+
+#submitButton {
+  display: none;
+}
+
+#instructions {
+  width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 100px;
+}
+
+#startExperiment {
+  color: rgb(200,200,200);
+  text-decoration: none;
+}
+
+#startExperiment:hover {
+  color: white;
+}
+
+#startExperimentButton {
+  width: 200px;
+  text-align: center;
+  border: 4px outset green;
+  background: green;
+  padding: 5px;
+  margin: 0 auto;
+}
+</style>
+
+<div id="instructions">
+<p>PART 1: How Corruptible Does the Politician Look?
+</p>
+<p>For this experiment, you will view photos of politicians and rate how corruptible each of them looks. This
+part is split into multiple blocks. You will be given the option to take breaks between blocks.
+This part will take approximately 26 minutes so you are encouraged to take some breaks between
+blocks.
+</p>
+</p>For each politician, you will see three screens as follow. There will be more detailed instructions
+about the axis labels once the experiment starts.
+When you see the fixation cross screen, please fixate your eyes at the cross. Then the photo will
+be up for a short time. You can make a choice as soon as the photo appears; you can still make a
+choice a short time after the photo disappears. Click the empty bubbles on the scale to indicate where you 
+think the politician should be on the scale. As soon as you rate this photo, you will move to the next photo 
+and continue rating. Several practice photos will be given to familiarize you with the task once you start the experiment.
+</p>
+<p>Please make your judgment as quickly and precisely as possible.
+You are encouraged to use the full range to rate the politicians.
+<div id="startExperimentButton">
+<a href="#" id="startExperiment">Start Experiment</a>
+</div>
+</p>
+</div>
+
+<div id="trial1" class="trialDiv">
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/1.0.jpg" width="100" id="trialImage1"></p>
+<ul class="likert">
+  <li> Dishonest </li>
+  <li><input type="radio" name="honest" value="1" /></li>
+  <li><input type="radio" name="honest" value="2" /></li>
+  <li><input type="radio" name="honest" value="3" /></li>
+  <li><input type="radio" name="honest" value="4" /></li>
+  <li><input type="radio" name="honest" value="5" /></li>
+  <li><input type="radio" name="honest" value="6" /></li>
+  <li><input type="radio" name="honest" value="7" /></li>
+  <li><input type="radio" name="honest" value="8" /></li>
+  <li><input type="radio" name="honest" value="9" /></li>
+  <li> Honest </li>
+</ul>
+<input type="hidden" name="question1RT" value="0" id="reactionTime1">
+</div>
+
+<div id="trial2" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/1.1.jpg" width="100" id="trialImage2"></p>
+<ul class="likert">
+  <li> Dishonest </li>
+  <li><input type="radio" name="honest" value="1" /></li>
+  <li><input type="radio" name="honest" value="2" /></li>
+  <li><input type="radio" name="honest" value="3" /></li>
+  <li><input type="radio" name="honest" value="4" /></li>
+  <li><input type="radio" name="honest" value="5" /></li>
+  <li><input type="radio" name="honest" value="6" /></li>
+  <li><input type="radio" name="honest" value="7" /></li>
+  <li><input type="radio" name="honest" value="8" /></li>
+  <li><input type="radio" name="honest" value="9" /></li>
+  <li> Honest </li>
+</ul>
+<input type="hidden" name="question2RT" value="0" id="reactionTime2">
+</div>
+
+<div id="trial3" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/10.0.jpg" width="100" id="trialImage3"></p>
+<ul class="likert">
+  <li> Dishonest </li>
+  <li><input type="radio" name="honest" value="1" /></li>
+  <li><input type="radio" name="honest" value="2" /></li>
+  <li><input type="radio" name="honest" value="3" /></li>
+  <li><input type="radio" name="honest" value="4" /></li>
+  <li><input type="radio" name="honest" value="5" /></li>
+  <li><input type="radio" name="honest" value="6" /></li>
+  <li><input type="radio" name="honest" value="7" /></li>
+  <li><input type="radio" name="honest" value="8" /></li>
+  <li><input type="radio" name="honest" value="9" /></li>
+  <li> Honest </li>
+</ul>
+<input type="hidden" name="question3RT" value="0" id="reactionTime3">
+</div>
+
+<div id="trial4" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/10.1.jpg" width="100" id="trialImage4"></p>
+<ul class="likert">
+  <li> Dishonest </li>
+  <li><input type="radio" name="honest" value="1" /></li>
+  <li><input type="radio" name="honest" value="2" /></li>
+  <li><input type="radio" name="honest" value="3" /></li>
+  <li><input type="radio" name="honest" value="4" /></li>
+  <li><input type="radio" name="honest" value="5" /></li>
+  <li><input type="radio" name="honest" value="6" /></li>
+  <li><input type="radio" name="honest" value="7" /></li>
+  <li><input type="radio" name="honest" value="8" /></li>
+  <li><input type="radio" name="honest" value="9" /></li>
+  <li> Honest </li>
+</ul>
+<input type="hidden" name="question4RT" value="0" id="reactionTime4">
+</div>
+
+<div id="trial5" class="trialDiv">
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/11.0.jpg" width="100" id="trialImage5"></p>
+<ul class="likert">
+  <li> Dishonest </li>
+  <li><input type="radio" name="honest" value="1" /></li>
+  <li><input type="radio" name="honest" value="2" /></li>
+  <li><input type="radio" name="honest" value="3" /></li>
+  <li><input type="radio" name="honest" value="4" /></li>
+  <li><input type="radio" name="honest" value="5" /></li>
+  <li><input type="radio" name="honest" value="6" /></li>
+  <li><input type="radio" name="honest" value="7" /></li>
+  <li><input type="radio" name="honest" value="8" /></li>
+  <li><input type="radio" name="honest" value="9" /></li>
+  <li> Honest </li>
+</ul>
+<input type="hidden" name="question5RT" value="0" id="reactionTime5">
+</div>
+
+<div id="trial6" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/11.1.jpg" width="100" id="trialImage6"></p>
+<ul class="likert">
+  <li> Dishonest </li>
+  <li><input type="radio" name="honest" value="1" /></li>
+  <li><input type="radio" name="honest" value="2" /></li>
+  <li><input type="radio" name="honest" value="3" /></li>
+  <li><input type="radio" name="honest" value="4" /></li>
+  <li><input type="radio" name="honest" value="5" /></li>
+  <li><input type="radio" name="honest" value="6" /></li>
+  <li><input type="radio" name="honest" value="7" /></li>
+  <li><input type="radio" name="honest" value="8" /></li>
+  <li><input type="radio" name="honest" value="9" /></li>
+  <li> Honest </li>
+</ul>
+<input type="hidden" name="question6RT" value="0" id="reactionTime6">
+</div>
+
+<div id="trial7" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/12.0.jpg" width="100" id="trialImage7"></p>
+<ul class="likert">
+  <li> Dishonest </li>
+  <li><input type="radio" name="honest" value="1" /></li>
+  <li><input type="radio" name="honest" value="2" /></li>
+  <li><input type="radio" name="honest" value="3" /></li>
+  <li><input type="radio" name="honest" value="4" /></li>
+  <li><input type="radio" name="honest" value="5" /></li>
+  <li><input type="radio" name="honest" value="6" /></li>
+  <li><input type="radio" name="honest" value="7" /></li>
+  <li><input type="radio" name="honest" value="8" /></li>
+  <li><input type="radio" name="honest" value="9" /></li>
+  <li> Honest </li>
+</ul>
+<input type="hidden" name="question7RT" value="0" id="reactionTime7">
+</div>
+
+<div id="trial8" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/12.1.jpg" width="100" id="trialImage8"></p>
+<ul class="likert">
+  <li> Dishonest </li>
+  <li><input type="radio" name="honest" value="1" /></li>
+  <li><input type="radio" name="honest" value="2" /></li>
+  <li><input type="radio" name="honest" value="3" /></li>
+  <li><input type="radio" name="honest" value="4" /></li>
+  <li><input type="radio" name="honest" value="5" /></li>
+  <li><input type="radio" name="honest" value="6" /></li>
+  <li><input type="radio" name="honest" value="7" /></li>
+  <li><input type="radio" name="honest" value="8" /></li>
+  <li><input type="radio" name="honest" value="9" /></li>
+  <li> Honest </li>
+</ul>
+<input type="hidden" name="question8RT" value="0" id="reactionTime8">
+</div>
+
+<div id="trial9" class="trialDiv">
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/13.0.jpg" width="100" id="trialImage9"></p>
+<ul class="likert">
+  <li> Dishonest </li>
+  <li><input type="radio" name="honest" value="1" /></li>
+  <li><input type="radio" name="honest" value="2" /></li>
+  <li><input type="radio" name="honest" value="3" /></li>
+  <li><input type="radio" name="honest" value="4" /></li>
+  <li><input type="radio" name="honest" value="5" /></li>
+  <li><input type="radio" name="honest" value="6" /></li>
+  <li><input type="radio" name="honest" value="7" /></li>
+  <li><input type="radio" name="honest" value="8" /></li>
+  <li><input type="radio" name="honest" value="9" /></li>
+  <li> Honest </li>
+</ul>
+<input type="hidden" name="question9RT" value="0" id="reactionTime9">
+</div>
+
+<div id="trial10" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/13.1.jpg" width="100" id="trialImage10"></p>
+<ul class="likert">
+  <li> Dishonest </li>
+  <li><input type="radio" name="honest" value="1" /></li>
+  <li><input type="radio" name="honest" value="2" /></li>
+  <li><input type="radio" name="honest" value="3" /></li>
+  <li><input type="radio" name="honest" value="4" /></li>
+  <li><input type="radio" name="honest" value="5" /></li>
+  <li><input type="radio" name="honest" value="6" /></li>
+  <li><input type="radio" name="honest" value="7" /></li>
+  <li><input type="radio" name="honest" value="8" /></li>
+  <li><input type="radio" name="honest" value="9" /></li>
+  <li> Honest </li>
+</ul>
+<input type="hidden" name="question10RT" value="0" id="reactionTime10">
+</div>
+
+<div id="trial11" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/14.0.jpg" width="100" id="trialImage11"></p>
+<ul class="likert">
+  <li> Dishonest </li>
+  <li><input type="radio" name="honest" value="1" /></li>
+  <li><input type="radio" name="honest" value="2" /></li>
+  <li><input type="radio" name="honest" value="3" /></li>
+  <li><input type="radio" name="honest" value="4" /></li>
+  <li><input type="radio" name="honest" value="5" /></li>
+  <li><input type="radio" name="honest" value="6" /></li>
+  <li><input type="radio" name="honest" value="7" /></li>
+  <li><input type="radio" name="honest" value="8" /></li>
+  <li><input type="radio" name="honest" value="9" /></li>
+  <li> Honest </li>
+</ul>
+<input type="hidden" name="question11RT" value="0" id="reactionTime11">
+</div>
+
+<div id="trial12" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/14.1.jpg" width="100" id="trialImage12"></p>
+<ul class="likert">
+  <li> Dishonest </li>
+  <li><input type="radio" name="honest" value="1" /></li>
+  <li><input type="radio" name="honest" value="2" /></li>
+  <li><input type="radio" name="honest" value="3" /></li>
+  <li><input type="radio" name="honest" value="4" /></li>
+  <li><input type="radio" name="honest" value="5" /></li>
+  <li><input type="radio" name="honest" value="6" /></li>
+  <li><input type="radio" name="honest" value="7" /></li>
+  <li><input type="radio" name="honest" value="8" /></li>
+  <li><input type="radio" name="honest" value="9" /></li>
+  <li> Honest </li>
+</ul>
+<input type="hidden" name="question12RT" value="0" id="reactionTime12">
+</div>
+
+<div id="trial13" class="trialDiv">
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/15.0.jpg" width="100" id="trialImage13"></p>
+<ul class="likert">
+  <li> Corruptible </li>
+  <li><input type="radio" name="corrupt" value="1" /></li>
+  <li><input type="radio" name="corrupt" value="2" /></li>
+  <li><input type="radio" name="corrupt" value="3" /></li>
+  <li><input type="radio" name="corrupt" value="4" /></li>
+  <li><input type="radio" name="corrupt" value="5" /></li>
+  <li><input type="radio" name="corrupt" value="6" /></li>
+  <li><input type="radio" name="corrupt" value="7" /></li>
+  <li><input type="radio" name="corrupt" value="8" /></li>
+  <li><input type="radio" name="corrupt" value="9" /></li>
+  <li> Incorruptible </li>
+</ul>
+<input type="hidden" name="question13RT" value="0" id="reactionTime13">
+</div>
+
+<div id="trial14" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/15.1.jpg" width="100" id="trialImage14"></p>
+<ul class="likert">
+  <li> Corruptible </li>
+  <li><input type="radio" name="corrupt" value="1" /></li>
+  <li><input type="radio" name="corrupt" value="2" /></li>
+  <li><input type="radio" name="corrupt" value="3" /></li>
+  <li><input type="radio" name="corrupt" value="4" /></li>
+  <li><input type="radio" name="corrupt" value="5" /></li>
+  <li><input type="radio" name="corrupt" value="6" /></li>
+  <li><input type="radio" name="corrupt" value="7" /></li>
+  <li><input type="radio" name="corrupt" value="8" /></li>
+  <li><input type="radio" name="corrupt" value="9" /></li>
+  <li> Incorruptible </li>
+</ul>
+<input type="hidden" name="question14RT" value="0" id="reactionTime14">
+</div>
+
+<div id="trial15" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/16.0.jpg" width="100" id="trialImage15"></p>
+<ul class="likert">
+  <li> Corruptible </li>
+  <li><input type="radio" name="corrupt" value="1" /></li>
+  <li><input type="radio" name="corrupt" value="2" /></li>
+  <li><input type="radio" name="corrupt" value="3" /></li>
+  <li><input type="radio" name="corrupt" value="4" /></li>
+  <li><input type="radio" name="corrupt" value="5" /></li>
+  <li><input type="radio" name="corrupt" value="6" /></li>
+  <li><input type="radio" name="corrupt" value="7" /></li>
+  <li><input type="radio" name="corrupt" value="8" /></li>
+  <li><input type="radio" name="corrupt" value="9" /></li>
+  <li> Incorruptible </li>
+</ul>
+<input type="hidden" name="question15RT" value="0" id="reactionTime15">
+</div>
+
+<div id="trial16" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/16.1.jpg" width="100" id="trialImage16"></p>
+<ul class="likert">
+  <li> Corruptible </li>
+  <li><input type="radio" name="corrupt" value="1" /></li>
+  <li><input type="radio" name="corrupt" value="2" /></li>
+  <li><input type="radio" name="corrupt" value="3" /></li>
+  <li><input type="radio" name="corrupt" value="4" /></li>
+  <li><input type="radio" name="corrupt" value="5" /></li>
+  <li><input type="radio" name="corrupt" value="6" /></li>
+  <li><input type="radio" name="corrupt" value="7" /></li>
+  <li><input type="radio" name="corrupt" value="8" /></li>
+  <li><input type="radio" name="corrupt" value="9" /></li>
+  <li> Incorruptible </li>
+</ul>
+<input type="hidden" name="question16RT" value="0" id="reactionTime16">
+</div>
+
+<div id="trial17" class="trialDiv">
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/17.0.jpg" width="100" id="trialImage17"></p>
+<ul class="likert">
+  <li> Corruptible </li>
+  <li><input type="radio" name="corrupt" value="1" /></li>
+  <li><input type="radio" name="corrupt" value="2" /></li>
+  <li><input type="radio" name="corrupt" value="3" /></li>
+  <li><input type="radio" name="corrupt" value="4" /></li>
+  <li><input type="radio" name="corrupt" value="5" /></li>
+  <li><input type="radio" name="corrupt" value="6" /></li>
+  <li><input type="radio" name="corrupt" value="7" /></li>
+  <li><input type="radio" name="corrupt" value="8" /></li>
+  <li><input type="radio" name="corrupt" value="9" /></li>
+  <li> Incorruptible </li>
+</ul>
+<input type="hidden" name="question17RT" value="0" id="reactionTime17">
+</div>
+
+<div id="trial18" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/17.1.jpg" width="100" id="trialImage18"></p>
+<ul class="likert">
+  <li> Corruptible </li>
+  <li><input type="radio" name="corrupt" value="1" /></li>
+  <li><input type="radio" name="corrupt" value="2" /></li>
+  <li><input type="radio" name="corrupt" value="3" /></li>
+  <li><input type="radio" name="corrupt" value="4" /></li>
+  <li><input type="radio" name="corrupt" value="5" /></li>
+  <li><input type="radio" name="corrupt" value="6" /></li>
+  <li><input type="radio" name="corrupt" value="7" /></li>
+  <li><input type="radio" name="corrupt" value="8" /></li>
+  <li><input type="radio" name="corrupt" value="9" /></li>
+  <li> Incorruptible </li>
+</ul>
+<input type="hidden" name="question18RT" value="0" id="reactionTime18">
+</div>
+
+<div id="trial19" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/18.0.jpg" width="100" id="trialImage19"></p>
+<ul class="likert">
+  <li> Corruptible </li>
+  <li><input type="radio" name="corrupt" value="1" /></li>
+  <li><input type="radio" name="corrupt" value="2" /></li>
+  <li><input type="radio" name="corrupt" value="3" /></li>
+  <li><input type="radio" name="corrupt" value="4" /></li>
+  <li><input type="radio" name="corrupt" value="5" /></li>
+  <li><input type="radio" name="corrupt" value="6" /></li>
+  <li><input type="radio" name="corrupt" value="7" /></li>
+  <li><input type="radio" name="corrupt" value="8" /></li>
+  <li><input type="radio" name="corrupt" value="9" /></li>
+  <li> Incorruptible </li>
+</ul>
+<input type="hidden" name="question19RT" value="0" id="reactionTime19">
+</div>
+
+<div id="trial20" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/18.1.jpg" width="100" id="trialImage20"></p>
+<ul class="likert">
+  <li> Corruptible </li>
+  <li><input type="radio" name="corrupt" value="1" /></li>
+  <li><input type="radio" name="corrupt" value="2" /></li>
+  <li><input type="radio" name="corrupt" value="3" /></li>
+  <li><input type="radio" name="corrupt" value="4" /></li>
+  <li><input type="radio" name="corrupt" value="5" /></li>
+  <li><input type="radio" name="corrupt" value="6" /></li>
+  <li><input type="radio" name="corrupt" value="7" /></li>
+  <li><input type="radio" name="corrupt" value="8" /></li>
+  <li><input type="radio" name="corrupt" value="9" /></li>
+  <li> Incorruptible </li>
+</ul>
+<input type="hidden" name="question20RT" value="0" id="reactionTime20">
+</div>
+
+<div id="trial21" class="trialDiv">
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/20.0.jpg" width="100" id="trialImage21"></p>
+<ul class="likert">
+  <li> Corruptible </li>
+  <li><input type="radio" name="corrupt" value="1" /></li>
+  <li><input type="radio" name="corrupt" value="2" /></li>
+  <li><input type="radio" name="corrupt" value="3" /></li>
+  <li><input type="radio" name="corrupt" value="4" /></li>
+  <li><input type="radio" name="corrupt" value="5" /></li>
+  <li><input type="radio" name="corrupt" value="6" /></li>
+  <li><input type="radio" name="corrupt" value="7" /></li>
+  <li><input type="radio" name="corrupt" value="8" /></li>
+  <li><input type="radio" name="corrupt" value="9" /></li>
+  <li> Incorruptible </li>
+</ul>
+<input type="hidden" name="question21RT" value="0" id="reactionTime21">
+</div>
+
+<div id="trial22" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/21.1.jpg" width="100" id="trialImage22"></p>
+<ul class="likert">
+  <li> Corruptible </li>
+  <li><input type="radio" name="corrupt" value="1" /></li>
+  <li><input type="radio" name="corrupt" value="2" /></li>
+  <li><input type="radio" name="corrupt" value="3" /></li>
+  <li><input type="radio" name="corrupt" value="4" /></li>
+  <li><input type="radio" name="corrupt" value="5" /></li>
+  <li><input type="radio" name="corrupt" value="6" /></li>
+  <li><input type="radio" name="corrupt" value="7" /></li>
+  <li><input type="radio" name="corrupt" value="8" /></li>
+  <li><input type="radio" name="corrupt" value="9" /></li>
+  <li> Incorruptible </li>
+</ul>
+<input type="hidden" name="question22RT" value="0" id="reactionTime22">
+</div>
+
+<div id="trial23" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/22.0.jpg" width="100" id="trialImage23"></p>
+<ul class="likert">
+  <li> Corruptible </li>
+  <li><input type="radio" name="corrupt" value="1" /></li>
+  <li><input type="radio" name="corrupt" value="2" /></li>
+  <li><input type="radio" name="corrupt" value="3" /></li>
+  <li><input type="radio" name="corrupt" value="4" /></li>
+  <li><input type="radio" name="corrupt" value="5" /></li>
+  <li><input type="radio" name="corrupt" value="6" /></li>
+  <li><input type="radio" name="corrupt" value="7" /></li>
+  <li><input type="radio" name="corrupt" value="8" /></li>
+  <li><input type="radio" name="corrupt" value="9" /></li>
+  <li> Incorruptible </li>
+</ul>
+<input type="hidden" name="question23RT" value="0" id="reactionTime23">
+</div>
+
+<div id="trial24" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/22.1.jpg" width="100" id="trialImage24"></p>
+<ul class="likert">
+  <li> Corruptible </li>
+  <li><input type="radio" name="corrupt" value="1" /></li>
+  <li><input type="radio" name="corrupt" value="2" /></li>
+  <li><input type="radio" name="corrupt" value="3" /></li>
+  <li><input type="radio" name="corrupt" value="4" /></li>
+  <li><input type="radio" name="corrupt" value="5" /></li>
+  <li><input type="radio" name="corrupt" value="6" /></li>
+  <li><input type="radio" name="corrupt" value="7" /></li>
+  <li><input type="radio" name="corrupt" value="8" /></li>
+  <li><input type="radio" name="corrupt" value="9" /></li>
+  <li> Incorruptible </li>
+</ul>
+<input type="hidden" name="question24RT" value="0" id="reactionTime24">
+</div>
+
+<div id="trial25" class="trialDiv">
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/23.0.jpg" width="100" id="trialImage25"></p>
+<ul class="likert">
+  <li> Untrustworthy </li>
+  <li><input type="radio" name="trust" value="1" /></li>
+  <li><input type="radio" name="trust" value="2" /></li>
+  <li><input type="radio" name="trust" value="3" /></li>
+  <li><input type="radio" name="trust" value="4" /></li>
+  <li><input type="radio" name="trust" value="5" /></li>
+  <li><input type="radio" name="trust" value="6" /></li>
+  <li><input type="radio" name="trust" value="7" /></li>
+  <li><input type="radio" name="trust" value="8" /></li>
+  <li><input type="radio" name="trust" value="9" /></li>
+  <li> Trustworthy </li>
+</ul>
+<input type="hidden" name="question25RT" value="0" id="reactionTime25">
+</div>
+
+<div id="trial26" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/23.1.jpg" width="100" id="trialImage26"></p>
+<ul class="likert">
+ <li> Untrustworthy </li>
+  <li><input type="radio" name="trust" value="1" /></li>
+  <li><input type="radio" name="trust" value="2" /></li>
+  <li><input type="radio" name="trust" value="3" /></li>
+  <li><input type="radio" name="trust" value="4" /></li>
+  <li><input type="radio" name="trust" value="5" /></li>
+  <li><input type="radio" name="trust" value="6" /></li>
+  <li><input type="radio" name="trust" value="7" /></li>
+  <li><input type="radio" name="trust" value="8" /></li>
+  <li><input type="radio" name="trust" value="9" /></li>
+  <li> Trustworthy </li>
+</ul>
+<input type="hidden" name="question26RT" value="0" id="reactionTime26">
+</div>
+
+<div id="trial27" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/24.0.jpg" width="100" id="trialImage27"></p>
+<ul class="likert">
+ <li> Untrustworthy </li>
+  <li><input type="radio" name="trust" value="1" /></li>
+  <li><input type="radio" name="trust" value="2" /></li>
+  <li><input type="radio" name="trust" value="3" /></li>
+  <li><input type="radio" name="trust" value="4" /></li>
+  <li><input type="radio" name="trust" value="5" /></li>
+  <li><input type="radio" name="trust" value="6" /></li>
+  <li><input type="radio" name="trust" value="7" /></li>
+  <li><input type="radio" name="trust" value="8" /></li>
+  <li><input type="radio" name="trust" value="9" /></li>
+  <li> Trustworthy </li>
+</ul>
+<input type="hidden" name="question27RT" value="0" id="reactionTime27">
+</div>
+
+<div id="trial28" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/24.1.jpg" width="100" id="trialImage28"></p>
+ <li> Untrustworthy </li>
+  <li><input type="radio" name="trust" value="1" /></li>
+  <li><input type="radio" name="trust" value="2" /></li>
+  <li><input type="radio" name="trust" value="3" /></li>
+  <li><input type="radio" name="trust" value="4" /></li>
+  <li><input type="radio" name="trust" value="5" /></li>
+  <li><input type="radio" name="trust" value="6" /></li>
+  <li><input type="radio" name="trust" value="7" /></li>
+  <li><input type="radio" name="trust" value="8" /></li>
+  <li><input type="radio" name="trust" value="9" /></li>
+  <li> Trustworthy </li>
+</ul>
+<input type="hidden" name="question28RT" value="0" id="reactionTime28">
+</div>
+
+<div id="trial29" class="trialDiv">
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/25.0.jpg" width="100" id="trialImage29"></p>
+<ul class="likert">
+ <li> Untrustworthy </li>
+  <li><input type="radio" name="trust" value="1" /></li>
+  <li><input type="radio" name="trust" value="2" /></li>
+  <li><input type="radio" name="trust" value="3" /></li>
+  <li><input type="radio" name="trust" value="4" /></li>
+  <li><input type="radio" name="trust" value="5" /></li>
+  <li><input type="radio" name="trust" value="6" /></li>
+  <li><input type="radio" name="trust" value="7" /></li>
+  <li><input type="radio" name="trust" value="8" /></li>
+  <li><input type="radio" name="trust" value="9" /></li>
+  <li> Trustworthy </li>
+</ul>
+<input type="hidden" name="question29RT" value="0" id="reactionTime29">
+</div>
+
+<div id="trial30" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/25.1.jpg" width="100" id="trialImage30"></p>
+<ul class="likert">
+ <li> Untrustworthy </li>
+  <li><input type="radio" name="trust" value="1" /></li>
+  <li><input type="radio" name="trust" value="2" /></li>
+  <li><input type="radio" name="trust" value="3" /></li>
+  <li><input type="radio" name="trust" value="4" /></li>
+  <li><input type="radio" name="trust" value="5" /></li>
+  <li><input type="radio" name="trust" value="6" /></li>
+  <li><input type="radio" name="trust" value="7" /></li>
+  <li><input type="radio" name="trust" value="8" /></li>
+  <li><input type="radio" name="trust" value="9" /></li>
+  <li> Trustworthy </li>
+</ul>
+<input type="hidden" name="question30RT" value="0" id="reactionTime30">
+</div>
+
+<div id="trial31" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/26.0.jpg" width="100" id="trialImage31"></p>
+<ul class="likert">
+ <li> Untrustworthy </li>
+  <li><input type="radio" name="trust" value="1" /></li>
+  <li><input type="radio" name="trust" value="2" /></li>
+  <li><input type="radio" name="trust" value="3" /></li>
+  <li><input type="radio" name="trust" value="4" /></li>
+  <li><input type="radio" name="trust" value="5" /></li>
+  <li><input type="radio" name="trust" value="6" /></li>
+  <li><input type="radio" name="trust" value="7" /></li>
+  <li><input type="radio" name="trust" value="8" /></li>
+  <li><input type="radio" name="trust" value="9" /></li>
+  <li> Trustworthy </li>
+</ul>
+<input type="hidden" name="question31RT" value="0" id="reactionTime31">
+</div>
+
+<div id="trial32" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/26.1.jpg" width="100" id="trialImage32"></p>
+<ul class="likert">
+ <li> Untrustworthy </li>
+  <li><input type="radio" name="trust" value="1" /></li>
+  <li><input type="radio" name="trust" value="2" /></li>
+  <li><input type="radio" name="trust" value="3" /></li>
+  <li><input type="radio" name="trust" value="4" /></li>
+  <li><input type="radio" name="trust" value="5" /></li>
+  <li><input type="radio" name="trust" value="6" /></li>
+  <li><input type="radio" name="trust" value="7" /></li>
+  <li><input type="radio" name="trust" value="8" /></li>
+  <li><input type="radio" name="trust" value="9" /></li>
+  <li> Trustworthy </li>
+</ul>
+<input type="hidden" name="question32RT" value="0" id="reactionTime32">
+</div>
+
+<div id="trial33" class="trialDiv">
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/27.0.jpg" width="100" id="trialImage33"></p>
+<ul class="likert">
+ <li> Untrustworthy </li>
+  <li><input type="radio" name="trust" value="1" /></li>
+  <li><input type="radio" name="trust" value="2" /></li>
+  <li><input type="radio" name="trust" value="3" /></li>
+  <li><input type="radio" name="trust" value="4" /></li>
+  <li><input type="radio" name="trust" value="5" /></li>
+  <li><input type="radio" name="trust" value="6" /></li>
+  <li><input type="radio" name="trust" value="7" /></li>
+  <li><input type="radio" name="trust" value="8" /></li>
+  <li><input type="radio" name="trust" value="9" /></li>
+  <li> Trustworthy </li>
+</ul>
+<input type="hidden" name="question33RT" value="0" id="reactionTime33">
+</div>
+
+<div id="trial34" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/27.1.jpg" width="100" id="trialImage34"></p>
+<ul class="likert">
+ <li> Untrustworthy </li>
+  <li><input type="radio" name="trust" value="1" /></li>
+  <li><input type="radio" name="trust" value="2" /></li>
+  <li><input type="radio" name="trust" value="3" /></li>
+  <li><input type="radio" name="trust" value="4" /></li>
+  <li><input type="radio" name="trust" value="5" /></li>
+  <li><input type="radio" name="trust" value="6" /></li>
+  <li><input type="radio" name="trust" value="7" /></li>
+  <li><input type="radio" name="trust" value="8" /></li>
+  <li><input type="radio" name="trust" value="9" /></li>
+  <li> Trustworthy </li>
+</ul>
+<input type="hidden" name="question34RT" value="0" id="reactionTime34">
+</div>
+
+<div id="trial35" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/28.0.jpg" width="100" id="trialImage35"></p>
+<ul class="likert">
+ <li> Untrustworthy </li>
+  <li><input type="radio" name="trust" value="1" /></li>
+  <li><input type="radio" name="trust" value="2" /></li>
+  <li><input type="radio" name="trust" value="3" /></li>
+  <li><input type="radio" name="trust" value="4" /></li>
+  <li><input type="radio" name="trust" value="5" /></li>
+  <li><input type="radio" name="trust" value="6" /></li>
+  <li><input type="radio" name="trust" value="7" /></li>
+  <li><input type="radio" name="trust" value="8" /></li>
+  <li><input type="radio" name="trust" value="9" /></li>
+  <li> Trustworthy </li>
+</ul>
+<input type="hidden" name="question35RT" value="0" id="reactionTime35">
+</div>
+
+<div id="trial36" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/28.1.jpg" width="100" id="trialImage36"></p>
+<ul class="likert">
+ <li> Untrustworthy </li>
+  <li><input type="radio" name="trust" value="1" /></li>
+  <li><input type="radio" name="trust" value="2" /></li>
+  <li><input type="radio" name="trust" value="3" /></li>
+  <li><input type="radio" name="trust" value="4" /></li>
+  <li><input type="radio" name="trust" value="5" /></li>
+  <li><input type="radio" name="trust" value="6" /></li>
+  <li><input type="radio" name="trust" value="7" /></li>
+  <li><input type="radio" name="trust" value="8" /></li>
+  <li><input type="radio" name="trust" value="9" /></li>
+  <li> Trustworthy </li>
+</ul>
+<input type="hidden" name="question36RT" value="0" id="reactionTime36">
+</div>
+
+<div id="trial37" class="trialDiv">
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/29.0.jpg" width="100" id="trialImage1"></p>
+<ul class="likert">
+ <li> Selfless </li>
+  <li><input type="radio" name="selfish" value="1" /></li>
+  <li><input type="radio" name="selfish" value="2" /></li>
+  <li><input type="radio" name="selfish" value="3" /></li>
+  <li><input type="radio" name="selfish" value="4" /></li>
+  <li><input type="radio" name="selfish" value="5" /></li>
+  <li><input type="radio" name="selfish" value="6" /></li>
+  <li><input type="radio" name="selfish" value="7" /></li>
+  <li><input type="radio" name="selfish" value="8" /></li>
+  <li><input type="radio" name="selfish" value="9" /></li>
+  <li> Selfish </li>
+</ul>
+<input type="hidden" name="question37RT" value="0" id="reactionTime37">
+</div>
+
+<div id="trial38" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/29.1.jpg" width="100" id="trialImage38"></p>
+<ul class="likert">
+ <li> Selfless </li>
+  <li><input type="radio" name="selfish" value="1" /></li>
+  <li><input type="radio" name="selfish" value="2" /></li>
+  <li><input type="radio" name="selfish" value="3" /></li>
+  <li><input type="radio" name="selfish" value="4" /></li>
+  <li><input type="radio" name="selfish" value="5" /></li>
+  <li><input type="radio" name="selfish" value="6" /></li>
+  <li><input type="radio" name="selfish" value="7" /></li>
+  <li><input type="radio" name="selfish" value="8" /></li>
+  <li><input type="radio" name="selfish" value="9" /></li>
+  <li> Selfish </li>
+</ul>
+<input type="hidden" name="question38RT" value="0" id="reactionTime38">
+</div>
+
+<div id="trial39" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/3.0.jpg" width="100" id="trialImage39"></p>
+<ul class="likert">
+ <li> Selfless </li>
+  <li><input type="radio" name="selfish" value="1" /></li>
+  <li><input type="radio" name="selfish" value="2" /></li>
+  <li><input type="radio" name="selfish" value="3" /></li>
+  <li><input type="radio" name="selfish" value="4" /></li>
+  <li><input type="radio" name="selfish" value="5" /></li>
+  <li><input type="radio" name="selfish" value="6" /></li>
+  <li><input type="radio" name="selfish" value="7" /></li>
+  <li><input type="radio" name="selfish" value="8" /></li>
+  <li><input type="radio" name="selfish" value="9" /></li>
+  <li> Selfish </li>
+</ul>
+<input type="hidden" name="question39RT" value="0" id="reactionTime39">
+</div>
+
+<div id="trial40" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/3.1.jpg" width="100" id="trialImage40"></p>
+<ul class="likert">
+ <li> Selfless </li>
+  <li><input type="radio" name="selfish" value="1" /></li>
+  <li><input type="radio" name="selfish" value="2" /></li>
+  <li><input type="radio" name="selfish" value="3" /></li>
+  <li><input type="radio" name="selfish" value="4" /></li>
+  <li><input type="radio" name="selfish" value="5" /></li>
+  <li><input type="radio" name="selfish" value="6" /></li>
+  <li><input type="radio" name="selfish" value="7" /></li>
+  <li><input type="radio" name="selfish" value="8" /></li>
+  <li><input type="radio" name="selfish" value="9" /></li>
+  <li> Selfish </li>
+</ul>
+<input type="hidden" name="question40RT" value="0" id="reactionTime40">
+</div>
+
+<div id="trial41" class="trialDiv">
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/30.0.jpg" width="100" id="trialImage41"></p>
+<ul class="likert">
+ <li> Selfless </li>
+  <li><input type="radio" name="selfish" value="1" /></li>
+  <li><input type="radio" name="selfish" value="2" /></li>
+  <li><input type="radio" name="selfish" value="3" /></li>
+  <li><input type="radio" name="selfish" value="4" /></li>
+  <li><input type="radio" name="selfish" value="5" /></li>
+  <li><input type="radio" name="selfish" value="6" /></li>
+  <li><input type="radio" name="selfish" value="7" /></li>
+  <li><input type="radio" name="selfish" value="8" /></li>
+  <li><input type="radio" name="selfish" value="9" /></li>
+  <li> Selfish </li>
+</ul>
+<input type="hidden" name="question41RT" value="0" id="reactionTime41">
+</div>
+
+<div id="trial42" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/30.1.jpg" width="100" id="trialImage42"></p>
+<ul class="likert">
+ <li> Selfless </li>
+  <li><input type="radio" name="selfish" value="1" /></li>
+  <li><input type="radio" name="selfish" value="2" /></li>
+  <li><input type="radio" name="selfish" value="3" /></li>
+  <li><input type="radio" name="selfish" value="4" /></li>
+  <li><input type="radio" name="selfish" value="5" /></li>
+  <li><input type="radio" name="selfish" value="6" /></li>
+  <li><input type="radio" name="selfish" value="7" /></li>
+  <li><input type="radio" name="selfish" value="8" /></li>
+  <li><input type="radio" name="selfish" value="9" /></li>
+  <li> Selfish </li>
+</ul>
+<input type="hidden" name="question42RT" value="0" id="reactionTime42">
+</div>
+
+<div id="trial43" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/31.0.jpg" width="100" id="trialImage43"></p>
+<ul class="likert">
+ <li> Selfless </li>
+  <li><input type="radio" name="selfish" value="1" /></li>
+  <li><input type="radio" name="selfish" value="2" /></li>
+  <li><input type="radio" name="selfish" value="3" /></li>
+  <li><input type="radio" name="selfish" value="4" /></li>
+  <li><input type="radio" name="selfish" value="5" /></li>
+  <li><input type="radio" name="selfish" value="6" /></li>
+  <li><input type="radio" name="selfish" value="7" /></li>
+  <li><input type="radio" name="selfish" value="8" /></li>
+  <li><input type="radio" name="selfish" value="9" /></li>
+  <li> Selfish </li>
+</ul>
+<input type="hidden" name="question43RT" value="0" id="reactionTime43">
+</div>
+
+<div id="trial44" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/31.1.jpg" width="100" id="trialImage44"></p>
+<ul class="likert">
+ <li> Selfless </li>
+  <li><input type="radio" name="selfish" value="1" /></li>
+  <li><input type="radio" name="selfish" value="2" /></li>
+  <li><input type="radio" name="selfish" value="3" /></li>
+  <li><input type="radio" name="selfish" value="4" /></li>
+  <li><input type="radio" name="selfish" value="5" /></li>
+  <li><input type="radio" name="selfish" value="6" /></li>
+  <li><input type="radio" name="selfish" value="7" /></li>
+  <li><input type="radio" name="selfish" value="8" /></li>
+  <li><input type="radio" name="selfish" value="9" /></li>
+  <li> Selfish </li>
+</ul>
+<input type="hidden" name="question44RT" value="0" id="reactionTime44">
+</div>
+
+<div id="trial45" class="trialDiv">
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/32.0.jpg" width="100" id="trialImage45"></p>
+<ul class="likert">
+ <li> Selfless </li>
+  <li><input type="radio" name="selfish" value="1" /></li>
+  <li><input type="radio" name="selfish" value="2" /></li>
+  <li><input type="radio" name="selfish" value="3" /></li>
+  <li><input type="radio" name="selfish" value="4" /></li>
+  <li><input type="radio" name="selfish" value="5" /></li>
+  <li><input type="radio" name="selfish" value="6" /></li>
+  <li><input type="radio" name="selfish" value="7" /></li>
+  <li><input type="radio" name="selfish" value="8" /></li>
+  <li><input type="radio" name="selfish" value="9" /></li>
+  <li> Selfish </li>
+</ul>
+<input type="hidden" name="question45RT" value="0" id="reactionTime45">
+</div>
+
+<div id="trial46" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/32.1.jpg" width="100" id="trialImage46"></p>
+<ul class="likert">
+ <li> Selfless </li>
+  <li><input type="radio" name="selfish" value="1" /></li>
+  <li><input type="radio" name="selfish" value="2" /></li>
+  <li><input type="radio" name="selfish" value="3" /></li>
+  <li><input type="radio" name="selfish" value="4" /></li>
+  <li><input type="radio" name="selfish" value="5" /></li>
+  <li><input type="radio" name="selfish" value="6" /></li>
+  <li><input type="radio" name="selfish" value="7" /></li>
+  <li><input type="radio" name="selfish" value="8" /></li>
+  <li><input type="radio" name="selfish" value="9" /></li>
+  <li> Selfish </li>
+</ul>
+<input type="hidden" name="question46RT" value="0" id="reactionTime46">
+</div>
+
+<div id="trial47" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/33.0.jpg" width="100" id="trialImage47"></p>
+<ul class="likert">
+ <li> Selfless </li>
+  <li><input type="radio" name="selfish" value="1" /></li>
+  <li><input type="radio" name="selfish" value="2" /></li>
+  <li><input type="radio" name="selfish" value="3" /></li>
+  <li><input type="radio" name="selfish" value="4" /></li>
+  <li><input type="radio" name="selfish" value="5" /></li>
+  <li><input type="radio" name="selfish" value="6" /></li>
+  <li><input type="radio" name="selfish" value="7" /></li>
+  <li><input type="radio" name="selfish" value="8" /></li>
+  <li><input type="radio" name="selfish" value="9" /></li>
+  <li> Selfish </li>
+</ul>
+<input type="hidden" name="question47RT" value="0" id="reactionTime47">
+</div>
+
+<div id="trial48" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/33.1.jpg" width="100" id="trialImage48"></p>
+<ul class="likert">
+ <li> Selfless </li>
+  <li><input type="radio" name="selfish" value="1" /></li>
+  <li><input type="radio" name="selfish" value="2" /></li>
+  <li><input type="radio" name="selfish" value="3" /></li>
+  <li><input type="radio" name="selfish" value="4" /></li>
+  <li><input type="radio" name="selfish" value="5" /></li>
+  <li><input type="radio" name="selfish" value="6" /></li>
+  <li><input type="radio" name="selfish" value="7" /></li>
+  <li><input type="radio" name="selfish" value="8" /></li>
+  <li><input type="radio" name="selfish" value="9" /></li>
+  <li> Selfish </li>
+</ul>
+<input type="hidden" name="question48RT" value="0" id="reactionTime48">
+</div>
+
+<div id="trial49" class="trialDiv">
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/34.0.jpg" width="100" id="trialImage49"></p>
+<ul class="likert">
+ <li> Ungenerous </li>
+  <li><input type="radio" name="generosity" value="1" /></li>
+  <li><input type="radio" name="generosity" value="2" /></li>
+  <li><input type="radio" name="generosity" value="3" /></li>
+  <li><input type="radio" name="generosity" value="4" /></li>
+  <li><input type="radio" name="generosity" value="5" /></li>
+  <li><input type="radio" name="generosity" value="6" /></li>
+  <li><input type="radio" name="generosity" value="7" /></li>
+  <li><input type="radio" name="generosity" value="8" /></li>
+  <li><input type="radio" name="generosity" value="9" /></li>
+  <li> Generous </li>
+</ul>
+<input type="hidden" name="question49RT" value="0" id="reactionTime49">
+</div>
+
+<div id="trial50" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/34.1.jpg" width="100" id="trialImage50"></p>
+<ul class="likert">
+ <li> Ungenerous </li>
+  <li><input type="radio" name="generosity" value="1" /></li>
+  <li><input type="radio" name="generosity" value="2" /></li>
+  <li><input type="radio" name="generosity" value="3" /></li>
+  <li><input type="radio" name="generosity" value="4" /></li>
+  <li><input type="radio" name="generosity" value="5" /></li>
+  <li><input type="radio" name="generosity" value="6" /></li>
+  <li><input type="radio" name="generosity" value="7" /></li>
+  <li><input type="radio" name="generosity" value="8" /></li>
+  <li><input type="radio" name="generosity" value="9" /></li>
+  <li> Generous </li>
+</ul>
+<input type="hidden" name="question50RT" value="0" id="reactionTime50">
+</div>
+
+<div id="trial51" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/35.0.jpg" width="100" id="trialImage51"></p>
+<ul class="likert">
+ <li> Ungenerous </li>
+  <li><input type="radio" name="generosity" value="1" /></li>
+  <li><input type="radio" name="generosity" value="2" /></li>
+  <li><input type="radio" name="generosity" value="3" /></li>
+  <li><input type="radio" name="generosity" value="4" /></li>
+  <li><input type="radio" name="generosity" value="5" /></li>
+  <li><input type="radio" name="generosity" value="6" /></li>
+  <li><input type="radio" name="generosity" value="7" /></li>
+  <li><input type="radio" name="generosity" value="8" /></li>
+  <li><input type="radio" name="generosity" value="9" /></li>
+  <li> Generous </li>
+</ul>
+<input type="hidden" name="question51RT" value="0" id="reactionTime51">
+</div>
+
+<div id="trial52" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/35.1.jpg" width="100" id="trialImage52"></p>
+<ul class="likert">
+ <li> Ungenerous </li>
+  <li><input type="radio" name="generosity" value="1" /></li>
+  <li><input type="radio" name="generosity" value="2" /></li>
+  <li><input type="radio" name="generosity" value="3" /></li>
+  <li><input type="radio" name="generosity" value="4" /></li>
+  <li><input type="radio" name="generosity" value="5" /></li>
+  <li><input type="radio" name="generosity" value="6" /></li>
+  <li><input type="radio" name="generosity" value="7" /></li>
+  <li><input type="radio" name="generosity" value="8" /></li>
+  <li><input type="radio" name="generosity" value="9" /></li>
+  <li> Generous </li>
+</ul>
+<input type="hidden" name="question52RT" value="0" id="reactionTime52">
+</div>
+
+<div id="trial53" class="trialDiv">
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/37.0.jpg" width="100" id="trialImage53"></p>
+<ul class="likert">
+ <li> Ungenerous </li>
+  <li><input type="radio" name="generosity" value="1" /></li>
+  <li><input type="radio" name="generosity" value="2" /></li>
+  <li><input type="radio" name="generosity" value="3" /></li>
+  <li><input type="radio" name="generosity" value="4" /></li>
+  <li><input type="radio" name="generosity" value="5" /></li>
+  <li><input type="radio" name="generosity" value="6" /></li>
+  <li><input type="radio" name="generosity" value="7" /></li>
+  <li><input type="radio" name="generosity" value="8" /></li>
+  <li><input type="radio" name="generosity" value="9" /></li>
+  <li> Generous </li>
+</ul>
+<input type="hidden" name="question53RT" value="0" id="reactionTime53">
+</div>
+
+<div id="trial54" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/37.1.jpg" width="100" id="trialImage54"></p>
+<ul class="likert">
+ <li> Ungenerous </li>
+  <li><input type="radio" name="generosity" value="1" /></li>
+  <li><input type="radio" name="generosity" value="2" /></li>
+  <li><input type="radio" name="generosity" value="3" /></li>
+  <li><input type="radio" name="generosity" value="4" /></li>
+  <li><input type="radio" name="generosity" value="5" /></li>
+  <li><input type="radio" name="generosity" value="6" /></li>
+  <li><input type="radio" name="generosity" value="7" /></li>
+  <li><input type="radio" name="generosity" value="8" /></li>
+  <li><input type="radio" name="generosity" value="9" /></li>
+  <li> Generous </li>
+</ul>
+<input type="hidden" name="question54RT" value="0" id="reactionTime54">
+</div>
+
+<div id="trial55" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/38.0.jpg" width="100" id="trialImage55"></p>
+<ul class="likert">
+ <li> Ungenerous </li>
+  <li><input type="radio" name="generosity" value="1" /></li>
+  <li><input type="radio" name="generosity" value="2" /></li>
+  <li><input type="radio" name="generosity" value="3" /></li>
+  <li><input type="radio" name="generosity" value="4" /></li>
+  <li><input type="radio" name="generosity" value="5" /></li>
+  <li><input type="radio" name="generosity" value="6" /></li>
+  <li><input type="radio" name="generosity" value="7" /></li>
+  <li><input type="radio" name="generosity" value="8" /></li>
+  <li><input type="radio" name="generosity" value="9" /></li>
+  <li> Generous </li>
+</ul>
+<input type="hidden" name="question55RT" value="0" id="reactionTime55">
+</div>
+
+<div id="trial56" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/38.1.jpg" width="100" id="trialImage56"></p>
+<ul class="likert">
+ <li> Ungenerous </li>
+  <li><input type="radio" name="generosity" value="1" /></li>
+  <li><input type="radio" name="generosity" value="2" /></li>
+  <li><input type="radio" name="generosity" value="3" /></li>
+  <li><input type="radio" name="generosity" value="4" /></li>
+  <li><input type="radio" name="generosity" value="5" /></li>
+  <li><input type="radio" name="generosity" value="6" /></li>
+  <li><input type="radio" name="generosity" value="7" /></li>
+  <li><input type="radio" name="generosity" value="8" /></li>
+  <li><input type="radio" name="generosity" value="9" /></li>
+  <li> Generous </li>
+</ul>
+<input type="hidden" name="question56RT" value="0" id="reactionTime56">
+</div>
+
+<div id="trial57" class="trialDiv">
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/39.0.jpg" width="100" id="trialImage57"></p>
+<ul class="likert">
+ <li> Ungenerous </li>
+  <li><input type="radio" name="generosity" value="1" /></li>
+  <li><input type="radio" name="generosity" value="2" /></li>
+  <li><input type="radio" name="generosity" value="3" /></li>
+  <li><input type="radio" name="generosity" value="4" /></li>
+  <li><input type="radio" name="generosity" value="5" /></li>
+  <li><input type="radio" name="generosity" value="6" /></li>
+  <li><input type="radio" name="generosity" value="7" /></li>
+  <li><input type="radio" name="generosity" value="8" /></li>
+  <li><input type="radio" name="generosity" value="9" /></li>
+  <li> Generous </li>
+</ul>
+<input type="hidden" name="question57RT" value="0" id="reactionTime57">
+</div>
+
+<div id="trial58" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/39.1.jpg" width="100" id="trialImage58"></p>
+<ul class="likert">
+ <li> Ungenerous </li>
+  <li><input type="radio" name="generosity" value="1" /></li>
+  <li><input type="radio" name="generosity" value="2" /></li>
+  <li><input type="radio" name="generosity" value="3" /></li>
+  <li><input type="radio" name="generosity" value="4" /></li>
+  <li><input type="radio" name="generosity" value="5" /></li>
+  <li><input type="radio" name="generosity" value="6" /></li>
+  <li><input type="radio" name="generosity" value="7" /></li>
+  <li><input type="radio" name="generosity" value="8" /></li>
+  <li><input type="radio" name="generosity" value="9" /></li>
+  <li> Generous </li>
+</ul>
+<input type="hidden" name="question58RT" value="0" id="reactionTime58">
+</div>
+
+<div id="trial59" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/4.0.jpg" width="100" id="trialImage59"></p>
+<ul class="likert">
+ <li> Ungenerous </li>
+  <li><input type="radio" name="generosity" value="1" /></li>
+  <li><input type="radio" name="generosity" value="2" /></li>
+  <li><input type="radio" name="generosity" value="3" /></li>
+  <li><input type="radio" name="generosity" value="4" /></li>
+  <li><input type="radio" name="generosity" value="5" /></li>
+  <li><input type="radio" name="generosity" value="6" /></li>
+  <li><input type="radio" name="generosity" value="7" /></li>
+  <li><input type="radio" name="generosity" value="8" /></li>
+  <li><input type="radio" name="generosity" value="9" /></li>
+  <li> Generous </li>
+</ul>
+<input type="hidden" name="question59RT" value="0" id="reactionTime59">
+</div>
+
+<div id="trial60" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/4.1.jpg" width="100" id="trialImage60"></p>
+<ul class="likert">
+ <li> Ungenerous </li>
+  <li><input type="radio" name="generosity" value="1" /></li>
+  <li><input type="radio" name="generosity" value="2" /></li>
+  <li><input type="radio" name="generosity" value="3" /></li>
+  <li><input type="radio" name="generosity" value="4" /></li>
+  <li><input type="radio" name="generosity" value="5" /></li>
+  <li><input type="radio" name="generosity" value="6" /></li>
+  <li><input type="radio" name="generosity" value="7" /></li>
+  <li><input type="radio" name="generosity" value="8" /></li>
+  <li><input type="radio" name="generosity" value="9" /></li>
+  <li> Generous </li>
+</ul>
+<input type="hidden" name="question60RT" value="0" id="reactionTime60">
+</div>
+
+<div id="trial61" class="trialDiv">
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/5.0.jpg" width="100" id="trialImage61"></p>
+<ul class="likert">
+  <li> Dishonest </li>
+  <li><input type="radio" name="honest" value="1" /></li>
+  <li><input type="radio" name="honest" value="2" /></li>
+  <li><input type="radio" name="honest" value="3" /></li>
+  <li><input type="radio" name="honest" value="4" /></li>
+  <li><input type="radio" name="honest" value="5" /></li>
+  <li><input type="radio" name="honest" value="6" /></li>
+  <li><input type="radio" name="honest" value="7" /></li>
+  <li><input type="radio" name="honest" value="8" /></li>
+  <li><input type="radio" name="honest" value="9" /></li>
+  <li> Honest </li>
+</ul>
+<input type="hidden" name="question61RT" value="0" id="reactionTime61">
+</div>
+
+<div id="trial62" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/5.1.jpg" width="100" id="trialImage62"></p>
+<ul class="likert">
+  <li> Dishonest </li>
+  <li><input type="radio" name="honest" value="1" /></li>
+  <li><input type="radio" name="honest" value="2" /></li>
+  <li><input type="radio" name="honest" value="3" /></li>
+  <li><input type="radio" name="honest" value="4" /></li>
+  <li><input type="radio" name="honest" value="5" /></li>
+  <li><input type="radio" name="honest" value="6" /></li>
+  <li><input type="radio" name="honest" value="7" /></li>
+  <li><input type="radio" name="honest" value="8" /></li>
+  <li><input type="radio" name="honest" value="9" /></li>
+  <li> Honest </li>
+</ul>
+<input type="hidden" name="question62RT" value="0" id="reactionTime62">
+</div>
+
+<div id="trial63" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/6.0.jpg" width="100" id="trialImage63"></p>
+<ul class="likert">
+  <li> Corruptible </li>
+  <li><input type="radio" name="corrupt" value="1" /></li>
+  <li><input type="radio" name="corrupt" value="2" /></li>
+  <li><input type="radio" name="corrupt" value="3" /></li>
+  <li><input type="radio" name="corrupt" value="4" /></li>
+  <li><input type="radio" name="corrupt" value="5" /></li>
+  <li><input type="radio" name="corrupt" value="6" /></li>
+  <li><input type="radio" name="corrupt" value="7" /></li>
+  <li><input type="radio" name="corrupt" value="8" /></li>
+  <li><input type="radio" name="corrupt" value="9" /></li>
+  <li> Incorruptible </li>
+</ul>
+<input type="hidden" name="question63RT" value="0" id="reactionTime63">
+</div>
+
+<div id="trial64" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/6.1.jpg" width="100" id="trialImage64"></p>
+<ul class="likert">
+  <li> Corruptible </li>
+  <li><input type="radio" name="corrupt" value="1" /></li>
+  <li><input type="radio" name="corrupt" value="2" /></li>
+  <li><input type="radio" name="corrupt" value="3" /></li>
+  <li><input type="radio" name="corrupt" value="4" /></li>
+  <li><input type="radio" name="corrupt" value="5" /></li>
+  <li><input type="radio" name="corrupt" value="6" /></li>
+  <li><input type="radio" name="corrupt" value="7" /></li>
+  <li><input type="radio" name="corrupt" value="8" /></li>
+  <li><input type="radio" name="corrupt" value="9" /></li>
+  <li> Incorruptible </li>
+</ul>
+<input type="hidden" name="question64RT" value="0" id="reactionTime64">
+</div>
+
+<div id="trial65" class="trialDiv">
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/7.0.jpg" width="100" id="trialImage65"></p>
+<ul class="likert">
+ <li> Selfless </li>
+  <li><input type="radio" name="selfish" value="1" /></li>
+  <li><input type="radio" name="selfish" value="2" /></li>
+  <li><input type="radio" name="selfish" value="3" /></li>
+  <li><input type="radio" name="selfish" value="4" /></li>
+  <li><input type="radio" name="selfish" value="5" /></li>
+  <li><input type="radio" name="selfish" value="6" /></li>
+  <li><input type="radio" name="selfish" value="7" /></li>
+  <li><input type="radio" name="selfish" value="8" /></li>
+  <li><input type="radio" name="selfish" value="9" /></li>
+  <li> Selfish </li>
+</ul>
+<input type="hidden" name="question65RT" value="0" id="reactionTime65">
+</div>
+
+<div id="trial66" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/7.1.jpg" width="100" id="trialImage66"></p>
+<ul class="likert">
+ <li> Selfless </li>
+  <li><input type="radio" name="selfish" value="1" /></li>
+  <li><input type="radio" name="selfish" value="2" /></li>
+  <li><input type="radio" name="selfish" value="3" /></li>
+  <li><input type="radio" name="selfish" value="4" /></li>
+  <li><input type="radio" name="selfish" value="5" /></li>
+  <li><input type="radio" name="selfish" value="6" /></li>
+  <li><input type="radio" name="selfish" value="7" /></li>
+  <li><input type="radio" name="selfish" value="8" /></li>
+  <li><input type="radio" name="selfish" value="9" /></li>
+  <li> Selfish </li>
+</ul>
+<input type="hidden" name="question66RT" value="0" id="reactionTime66">
+</div>
+
+<div id="trial67" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/8.0.jpg" width="100" id="trialImage67"></p>
+<ul class="likert">
+ <li> Untrustworthy </li>
+  <li><input type="radio" name="trust" value="1" /></li>
+  <li><input type="radio" name="trust" value="2" /></li>
+  <li><input type="radio" name="trust" value="3" /></li>
+  <li><input type="radio" name="trust" value="4" /></li>
+  <li><input type="radio" name="trust" value="5" /></li>
+  <li><input type="radio" name="trust" value="6" /></li>
+  <li><input type="radio" name="trust" value="7" /></li>
+  <li><input type="radio" name="trust" value="8" /></li>
+  <li><input type="radio" name="trust" value="9" /></li>
+  <li> Trustworthy </li>
+</ul>
+<input type="hidden" name="question67RT" value="0" id="reactionTime67">
+</div>
+
+<div id="trial68" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/8.1.jpg" width="100" id="trialImage68"></p>
+<ul class="likert">
+ <li> Untrustworthy </li>
+  <li><input type="radio" name="trust" value="1" /></li>
+  <li><input type="radio" name="trust" value="2" /></li>
+  <li><input type="radio" name="trust" value="3" /></li>
+  <li><input type="radio" name="trust" value="4" /></li>
+  <li><input type="radio" name="trust" value="5" /></li>
+  <li><input type="radio" name="trust" value="6" /></li>
+  <li><input type="radio" name="trust" value="7" /></li>
+  <li><input type="radio" name="trust" value="8" /></li>
+  <li><input type="radio" name="trust" value="9" /></li>
+  <li> Trustworthy </li>
+</ul>
+<input type="hidden" name="question68RT" value="0" id="reactionTime68">
+</div>
+
+<div id="trial69" class="trialDiv">
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/9.0.jpg" width="100" id="trialImage69"></p>
+<ul class="likert">
+ <li> Ungenerous </li>
+  <li><input type="radio" name="generosity" value="1" /></li>
+  <li><input type="radio" name="generosity" value="2" /></li>
+  <li><input type="radio" name="generosity" value="3" /></li>
+  <li><input type="radio" name="generosity" value="4" /></li>
+  <li><input type="radio" name="generosity" value="5" /></li>
+  <li><input type="radio" name="generosity" value="6" /></li>
+  <li><input type="radio" name="generosity" value="7" /></li>
+  <li><input type="radio" name="generosity" value="8" /></li>
+  <li><input type="radio" name="generosity" value="9" /></li>
+  <li> Generous </li>
+</ul>
+<input type="hidden" name="question69RT" value="0" id="reactionTime69">
+</div>
+
+<div id="trial70" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/9.1.jpg" width="100" id="trialImage70"></p>
+<ul class="likert">
+ <li> Ungenerous </li>
+  <li><input type="radio" name="generosity" value="1" /></li>
+  <li><input type="radio" name="generosity" value="2" /></li>
+  <li><input type="radio" name="generosity" value="3" /></li>
+  <li><input type="radio" name="generosity" value="4" /></li>
+  <li><input type="radio" name="generosity" value="5" /></li>
+  <li><input type="radio" name="generosity" value="6" /></li>
+  <li><input type="radio" name="generosity" value="7" /></li>
+  <li><input type="radio" name="generosity" value="8" /></li>
+  <li><input type="radio" name="generosity" value="9" /></li>
+  <li> Generous </li>
+</ul>
+<input type="hidden" name="question70RT" value="0" id="reactionTime70">
+</div>
+
+<div id="trial71" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/21.0.jpg" width="100" id="trialImage71"></p>
+<ul class="likert">
+  <li> Dishonest </li>
+  <li><input type="radio" name="honest" value="1" /></li>
+  <li><input type="radio" name="honest" value="2" /></li>
+  <li><input type="radio" name="honest" value="3" /></li>
+  <li><input type="radio" name="honest" value="4" /></li>
+  <li><input type="radio" name="honest" value="5" /></li>
+  <li><input type="radio" name="honest" value="6" /></li>
+  <li><input type="radio" name="honest" value="7" /></li>
+  <li><input type="radio" name="honest" value="8" /></li>
+  <li><input type="radio" name="honest" value="9" /></li>
+  <li> Honest </li>
+</ul>
+<input type="hidden" name="question71RT" value="0" id="reactionTime71">
+</div>
+
+<div id="trial72" class='trialDiv'>
+<p><img src="https://afs.stanford.edu/download/?path=/afs/ir/users/r/m/rmw237/WWW/Political%20Officials/20.1.jpg" width="100" id="trialImage72"></p>
+<ul class="likert">
+  <li> Dishonest </li>
+  <li><input type="radio" name="honest" value="1" /></li>
+  <li><input type="radio" name="honest" value="2" /></li>
+  <li><input type="radio" name="honest" value="3" /></li>
+  <li><input type="radio" name="honest" value="4" /></li>
+  <li><input type="radio" name="honest" value="5" /></li>
+  <li><input type="radio" name="honest" value="6" /></li>
+  <li><input type="radio" name="honest" value="7" /></li>
+  <li><input type="radio" name="honest" value="8" /></li>
+  <li><input type="radio" name="honest" value="9" /></li>
+  <li> Honest </li>
+</ul>
+<input type="hidden" name="question72RT" value="0" id="reactionTime72">
+</div>
+
+<script>
+$("#testDiv").click(function() {
+ $("#testDiv").html("<b>Hi</b>");
+});
+
+var trialOrder = shuffle([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72]);
+var curTrial = 0;
+var nTrials = 72;
+var startTrialTime;
+function trialIsOver() {
+  var curTime = new Date();
+  var rt = curTime - startTrialTime;
+ $('#reactionTime' + trialOrder[curTrial]).val(rt);
+  console.log(rt);
+  
+ $("input[type='radio'][name='question4']:checked").val()
+
+ $('#trial' + trialOrder[curTrial]).hide();
+  curTrial++;
+  if (curTrial >= nTrials) {
+   $('#submitButton').show();
+  } else {
+    showTrial(trialOrder[curTrial]);
+    startTrialTime = new Date();
+  }
+}
+
+function showTrial(whichImage) {
+  setTimeout(function() {
+   $('#trial' + whichImage).show();
+    setTimeout(function() {
+     $('#trialImage' + whichImage).hide();
+    }, 1000);
+  }, 1000);
+}
+
+$("#trial4").bind("mousemove", function(e){
+  console.log(e.offsetX);
+});
+
+function showFirstTrial() {
+  showTrial(trialOrder[0]);
+  startTrialTime = new Date();
+ $('#instructions').hide();
+}
+
+/* Fisher-Yates shuffle */
+function shuffle(o){
+    for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+    return o;
+}
+
+/* Wait for clicks */
+$('#startExperiment').click(showFirstTrial);
+$('.likert').click(trialIsOver);
+</script>
+
+<!-- do not put this on Turk -->
+<input type="submit" id="submitButton">
+   
