@@ -24,7 +24,7 @@ In line with the original paper, this study included 22 participants from Amazon
 
 Original effect size was > d = .8 and only 11 participants were needed to reach 95% power. 
 
-###Planned Sample
+### Planned Sample
 
 This replication has a planned sample size of 22. Participants must be 18 years of age or older, native or bilingual English speakers, and have normal or corrected-to-normal vision. Participants not meeting any of the above criteria are excluded from analysis.
 
@@ -49,7 +49,7 @@ specified the trait to be judged (e.g., corruptibility). Participants were instr
 ### Analysis Plan
 
 Data cleaning was performed to transform the raw data to "tidy" format. Only the corruptibility scale was evaluated, so the other 4 scales tested in the experiment were removed. The final spreadsheet contained four columns: Subject_ID, Image_ID, Record, and Rating. 
-Data exclusion involved several steps. Data was excluded if a response was not entered for 10% or more trials (>/= 7 trials), if participants entered a response in less than 100ms, and if the same response was entered for 15 consecutive trials (equivalent to one block).
+Data exclusion involved several steps. Data was excluded if a response was not entered for 10% or more trials (>/= 7 trials), if participants entered a response in less than 100ms, and if the same response was entered for 15 consecutive trials (equivalent to one block). This replicastion was preregistered on OSF and can be found here: https://osf.io/5zqa6/
 
 Key analysis of interest - chi-square test 
 
@@ -71,7 +71,7 @@ It was not originally planned to remove the last trial for all participants. How
 
 ## Results
 
-As in the original study, this study found that participants performed better than chance at correctly identifying whether or not politicians had been convicted of corruption. While the original study did not present a graph, a graph of that data set was rendered and compared to this replication. Both the direction of the relationship and the significance of the findings were replicated. However, unlike the original study, the chi-square value was not replicated. The original paper indicated a chi-square of 10.125 p < .001. This study found a chi-square of .035, p = .85. In other words, the chi-square did not replicate. Why might this be? One possibility is the original paper used a denominator of 72 (72 images were presented) in order to evaluate accuracy for each scale. The problem with this is it is unclear whether participants actually saw 72 corruptibility scales or merely 72 total scales, SOME of which were corruptibility. The current study showed the same 72 images on 1 of 5 scales. This means participants always saw far fewer than 72 corruptibility scales. The denominator in the current study would then be much less. If participants in the original study did not see 72 corruptibility scales but the corruptibility ratings were averaged across all trials, this may have inflated the chi-square value. 
+As in the original study, this study found that participants performed better than chance at correctly identifying whether or not politicians had been convicted of corruption. Politicans convicted of political corruption received an average rating of 2.41 out of 5, and those with clean records received an average rating of 2.93 out of 5. Higher scores indicate participants were rated as being cleaner. Lower scores indicate participants were rated as being more corrupt. 
 
 ## Data preparation
 
@@ -200,12 +200,25 @@ geom_errorbar(aes(ymin = ((5-average_response) - sem_response), ymax = ((5-avera
   scale_color_brewer(palette = "Set1") +
   theme(axis.ticks.x = element_blank(),axis.text.x = element_blank()) +
   ylab("Rating")
+
 ```
 Note: The response values here are flipped to match the original paper. In that study, higher ratings = more corrupt and lower ratings = less corrupt. The values here were subtracted from 5, the highest possible rating participants could select. 
 The graphic representation and chi-square test were surprisingly quite different. The chi-square test revealed participants performed better than chance at identifying political officials who were convicted of political corruption, but the average ratings across conditions were nearly identical. The following histogram was mean to see the distribution of participant ratings. 
+
 ```{r}
+
 ggplot(corruptible_results, aes(x = responseValue, fill = Record)) +
          geom_histogram(stat = "count", position = "dodge")
 ```
 
+## Discussion
+
+### Summary of Replication Attempt
+
+Both the direction of the relationship and the significance of the findings were replicated. While the original study did not present a graph, a graph of that data set was rendered and compared to this replication. However, unlike the original study, the chi-square value was not replicated. The original paper indicated a chi-square of 10.125 p < .001. This study found a chi-square of .035, p = .85. In other words, the chi-square did not replicate. 
+
+### Commentary
+
+This stark contrast in findings was surprising. One possibility for this contrast is the original paper used a denominator of 72 (72 images were presented) in order to evaluate accuracy for each scale. The problem with this is it is unclear whether participants actually saw 72 corruptibility scales or merely 72 total scales, SOME of which were corruptibility. The current study showed the same 72 images on 1 of 5 scales. This means participants always saw far fewer than 72 corruptibility scales. The denominator in the current study would then be much less. If participants in the original study did not see 72 corruptibility scales but the corruptibility ratings were averaged across all trials, this may have inflated the chi-square value.
+As part of exploratory analyses, a histogram was produced to understand the distribution of participant responses. The responses were not normally distributed and followed no particular pattern. It was anticipated to find corrupt ratings increase over response values (recall the original study indicated higher scores = more corrupt and lower scores = less corrupt) and clean ratings decrease over response values, but this was not shown in the histogram. 
 
