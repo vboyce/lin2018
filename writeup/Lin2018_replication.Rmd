@@ -1,0 +1,198 @@
+---
+title: "Replication of Inferring Whether Officials Are Corruptible From Looking at Their Faces by Lin, Adolphs & Alvarez (2018, Psychological Science)"
+author: "Rondeline Williams (rondeline.williams@stanford.edu)"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output:
+  html_document:
+    toc: yes
+    toc_depth: 3
+    toc_float:
+      collapsed: false
+---
+
+## Introduction
+
+The current study seeks to replicate findings from "Replication of Inferring Whether Officials Are Corruptible From Looking at Their Faces." I chose to replicate this study because it is outside my area of study (social psychology), but not my field (psychology). I currently study children's language development as a function of environmental factors such as auditory noise and have never had the opportunity to study adult behavior. In experiment 1 of this study, the researchers explored how adults used photos of unfamiliar state and federal officials to determine an official's level of agression, deception, and corruptibility. Results indicated that state and federal officials who were convicted of political corruption were viewed as more dishonest asnd deceptive than their peers with clean records.
+The most challenging part of completing this replication study will be creating the set of photos/Likert scales to be uploaded to Mechanical Turk. Fortunately, the authors have provided additional information regarding their methods on OSF.
+
+## Methods
+
+### Participants
+In line with the original paper, this study included 22 participants from Amazon Mechanical Turk (MTurk). Participants were 18 years of age or older, native English speakers, and located in the United States. Additionally, they completed high school or more and had normal or corrected-to-normal vision. All participants obtained a human intelligence task (HIT) approval rate of at least 95% and successfully completed 500 or more assignments on MTurk. 
+
+### Power Analysis
+
+Original effect size, power analysis for samples to achieve 80%, 90%, 95% power to detect that effect size.  Considerations of feasibility for selecting planned sample size.
+
+###Planned Sample
+
+This replication has a planned sample size of 22. Participants must be 18 years of age or older, native or bilingual English speakers, and have normal or corrected-to-normal vision. Participants not meeting any of the above criteria will be excluded from analysis.
+
+### Materials
+
+All materials were collected in line with Lin et al. (2018) as follows. "Stimuli were photos of 72 real elected officials.All were Caucasian males who have held federal or state legislative offices in the United States. Photos were official headshots obtained from government websites and personal campaign websites (63%), news articles (23%), and Wikipedia (14%). All photos were converted to gray-scale and cropped to a uniform size. All faces were frontal, smiling, in clear focus, and centered in the middle of the image. Among the 72 officials, half were convicted of political corruption (corrupt officials), and the other half had clean records (noncorrupt officials). The corrupt officials were from two Wikipedia data sets (list of American state and local politicians convicted of crimes:
+https://en.wikipedia.org/wiki/List_of_American_state_
+and_local_politicians_convicted_of_crimes; list of
+American federal politicians convicted of crimes:
+https://en.wikipedia.org/wiki/List_of_American_fed
+eral_politicians_convicted_of_crimes). To reduce
+sources of variability, we included only officials who were Caucasian, were male, held federal or state legislative offices, and were convicted between 2001 and 2016 of political corruption conducted while in office (bribery, money laundering, embezzlement, mail fraud, wire fraud, tax fraud, conflict of interest, misusing funds, misusing office, or falsifying records). In addition, age information for these officials had to be publicly available, as did frontal photographs of acceptable clarity in which the official was smiling. All photographs had
+been taken while officials were in office. Most photos of the corrupt officials had a known creation date, and we confirmed that the photos were taken before their conviction (72%); for the rest of the photos (28%), the creation date was unknown (analyses were also performed when excluding data for these stimuli; the pattern of results did not change). The noncorrupt officials were randomly matched from the list of incumbents who had clean records, were holding the same office in the same state, and were of the same gender, the same race, and similar age (±12 years) as the corrupt officials during the period of their misconduct. For instance, if the stimuli contained a Caucasian male corrupt official who was a member of the Arizona House of Representatives during his misconduct at the age of
+55, then a noncorrupt official would be randomly
+selected from our available stimulus set from the list of Arizona House of Representatives incumbents who had a clean record and who was a Caucasian male between the ages of 43 and 67."
+
+### Procedure	
+
+The current study followed the original paper precisely. "Participants were not informed of the purpose of the study or the sampling of the stimuli. In particular, they were not given any information about the percentage of politicians in our stimulus set who might be corrupt in real life. They were told only that they would view a series of politician photos and that they should judge how corruptible, dishonest, selfish, trustworthy, and generous these politicians looked to them (experiment instructions are available at https://osf.io/k4mds/). Participants completed five blocks of experiments, with each block corresponding to judging one trait for all faces. The ordering of the faces within each block as well as the ordering of the blocks were randomized. Each block started with an instruction screen that
+specified the trait to be judged (e.g., corruptibility). Participants were instructed to make their decisions as quickly and precisely as possible. Six practice trials familiarized participants with the task. Participants viewed photos of officials one at a time in randomized order and made judgments. Each trial began with a fixation cross, followed by the photo (1 s) with a 5-point Likert scale below it. Scales were anchored with bipolar adjectives. Participants could make a decision as soon as the photo appeared and within 4 s after the photo disappeared. The orientation of the scale was randomized across blocks, and scores were reversecoded as needed. After completing all five blocks of ratings, participants were asked whether they had recognized any of the officials and filled out a short survey questionnaire on demographic characteristics, political attitudes, and personality."
+
+### Analysis Plan
+
+Data cleaning was performed to transform the raw data to "tidy" format. Only the corruptibility scale was evaluated, so the other 4 scales tested in the experiment were removed. The final spreadsheet contained four columns: Subject_ID, Image_ID, Record, and Rating. 
+Data exclusion involved several steps. Data was excluded if a response was not entered for 10% or more trials (>/= 7 trials), if participants entered a response in less than 100ms, and if the same response was entered for 15 consecutive trials (equivalent to one block).
+
+Key analysis of interest - chi-square test 
+
+### Differences from Original Study
+
+The current study included the same stimuli from experiment one of the original study, as well as the inclusion of breaks during the session. However, the current study employs breaks of up to 30 seconds at every 15th stimulus item, but the original article did not specify how breaks were taken. Additionally, the current study required fewer participants because the original effect size was impressively large. Rather than pressing numbers on the keyboard to submit a rating response as in the original study, participants in the current study must select a button on the screen using their mouse. Finally, the current study included any responses submitted after the stimulus was presented, which differed from the original study's restriction of ending the trial if a response was not submitted within 4s after the stimulus was presented.
+
+### Methods Addendum (Post Data Collection)
+
+To be collected
+
+#### Actual Sample
+  
+To be collected 
+
+#### Differences from pre-data collection methods plan
+
+  Any differences from what was described as the original plan, or “none”.
+
+## Results
+
+
+## Data preparation
+
+Data preparation following the analysis plan.
+
+### Read in libraries 
+```{r}
+library(tidyverse)
+library(ggplot2) 
+library(lme4)
+library(ggthemes)
+library(plotrix)
+library(psych)
+library(mada)
+library(powerAnalysis)
+library(eply)
+library(splitstackshape)
+
+```
+### Read in Data 
+```{r}
+rawdata <- read.csv("pilotdata.csv", header = TRUE)
+```
+### Next, select only the columns of interest and add a subject ID column
+```{r}
+tidydata <- rawdata %>% 
+  select(Answer.choice, Answer.proficient, Answer.recognition, Answer.responseValue, Answer.rtData, Answer.shuffle, Answer.vision) %>% 
+  mutate(subjectID = 1:nrow(rawdata)) %>% 
+#rename the columns 
+rename(Choice = Answer.choice, 
+       Proficient = Answer.proficient, 
+       responseValue =  Answer.responseValue, 
+       Shuffle = Answer.shuffle, Recognition = Answer.recognition, 
+       rtData = Answer.rtData, 
+       Vision = Answer.vision) 
+```
+### Now, data that was entered in one cell is split into separate rows    
+```{r}
+#split
+tidydata_split <- tidydata %>% 
+  cSplit(c("Choice", "responseValue", "rtData", "Shuffle"),",", direction = "long")
+```
+### All special characters are removed 
+```{r}
+tidierdata <- as.data.frame(gsub("[^[:alnum:][:space:].]", "", as.matrix(tidydata_split))) 
+View(tidierdata)
+```
+### Transforming data from character to numeric
+The data is read in as character strings, so this set of code will transform it into numeric data
+```{r}
+tidierdata$Choice <- as.numeric(as.character(tidierdata$Choice))
+tidierdata$Shuffle <-
+as.numeric(as.character(tidierdata$Shuffle))
+tidierdata$responseValue <-
+as.numeric(as.character(tidierdata$responseValue))
+tidierdata$subjectID <-
+as.numeric(as.character(tidierdata$subjectID))
+tidierdata$Vision <-
+as.numeric(as.character(tidierdata$Vision))
+tidierdata$Proficient <-
+as.numeric(as.character(tidierdata$Proficient))
+```
+### Now, only corruptible trials are selected
+```{r}
+corruptible <- tidierdata %>% 
+  filter(Choice >= .2, Choice < .4) %>% 
+  #add a record- clean or corrupt- column 
+  mutate(Record = ifelse(Shuffle %% 2, "corrupt", "clean")) %>% 
+  filter(Shuffle >3) %>% 
+na.omit()
+```
+### Exclusions
+Participants with English proficiency less than native or bilingual or visual impairment (even after correction) are excluded from analysis. Additionally, any participants who recognized any politician is excluded.
+Additionally, the final trial is excluded for all participants due to an experimental error. 
+```{r}
+
+corruptible_clean <- corruptible %>% 
+  filter(Vision == 1, Vision == 2) %>% 
+  filter(Proficient == 1, Proficient == 2)
+```
+## Confirmatory Analyses
+
+### Determine participants' accuracy 
+Responses less than 3 on corrupt politicians were considered correct, and responses greater than or equal to 3 on clean politicians were considered correct. Responses greater than 3 on corrupt or less than or equal to 3 on clean politicians were considered incorrect.
+```{r}
+corruptible_results <- corruptible_clean %>% 
+  mutate(Guess = ifelse((responseValue < 3)
+                        & (Record == "corrupt") | (responseValue >= 3) & (Record == "clean"), 1, 0))
+```
+### Key analysis- chi-square test
+The purpose of this analysis is to determine whether participants performed better than chance on categorizing political officials as corrupt or clean. Participants' guesses were classified as either 1 (right) or 0 (wrong). Then, the total number of right guesses was compared to the total number of wrong guesses. The original paper reported a chi-square of 10.125, p<.01 on the corruptibility scale. This is the value to be replicated here. 
+```{r}
+chisquare <- corruptible_results %>% 
+  group_by(Record) %>% 
+  summarise(right = sum(Guess),
+            wrong = nrow(corruptible_results) - sum(Guess)) %>% 
+  select(right, wrong)
+
+chisq.test(chisquare)
+
+```
+## Exploratory Analyses
+### Plot the results 
+While the original paper did not provide graphic representations of the findings, this replication included graphic information.
+```{r}
+#Get means and standard error
+corruptible_results_avg <- corruptible_results %>% 
+  group_by(Record) %>% 
+  summarise(average_response = mean(responseValue), sem_response = std.error(responseValue))
+
+#Plot  
+ggplot(corruptible_results_avg, aes(x = Record, y = average_response, fill = Record)) + 
+  geom_bar(position= "dodge", stat= "identity") +
+geom_errorbar(aes(ymin = (average_response - sem_response), ymax = (average_response + sem_response)), width = .5, position = "dodge") +
+  theme_few() +
+  scale_color_brewer(palette = "Set1") +
+  theme(axis.ticks.x = element_blank(),axis.text.x = element_blank())
+```
+The graphic representation and chi-square test were surprisingly quite different. The chi-square test revealed participants performed better than chance at identifying political officials who were convicted of political corruption, but the average ratings across conditions were nearly identical. The following histogram was mean to see the distribution of participant ratings. 
+```{r}
+ggplot(corruptible_results, aes(x = responseValue, fill = Record)) +
+         geom_histogram(stat = "count", position = "dodge")
+```
+
+
