@@ -86,14 +86,14 @@ library(ggthemes)
 library(plotrix)
 library(psych)
 library(mada)
-library(powerAnalysis)
+#library(powerAnalysis)
 library(eply)
 library(splitstackshape)
 
 ```
 ### Read in data 
 ```{r}
-rawdata <- read.csv("finaldata_cleanrecog.csv", header = TRUE)
+rawdata <- read.csv("finaldata_cleaned.csv", header = TRUE)
 ```
 ### Next, select only the columns of interest and add a subject ID column
 ```{r}
@@ -173,13 +173,13 @@ corruptible_results
 The purpose of this analysis is to determine whether participants performed better than chance on categorizing political officials as corrupt or clean. Participants' guesses were classified as either 1 (right) or 0 (wrong). Then, the total number of right guesses was compared to the total number of wrong guesses. The original paper reported a chi-square of 10.125, p<.01 on the corruptibility scale. This is the value to be replicated here. 
 ```{r}
 chisquare <- corruptible_results %>% 
-  group_by(Record) %>% 
+  #group_by(Record) %>% 
   summarise(right = sum(Guess),
-            wrong = nrow(corruptible_results) - sum(Guess)) %>% 
-  select(right, wrong)
+            wrong = n() - sum(Guess))
 
 chisq.test(chisquare)
 
+sum(chisquare)
 ```
 ## Exploratory Analyses
 ### Plot the results 
